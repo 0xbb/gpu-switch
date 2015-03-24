@@ -1,5 +1,5 @@
 # gpu-switch
-gfx-switch is a Linux application to switch between the integrated and dedicated GPU of the Macbook Pro 11,3 (Late 2013) for the next reboot.
+gpu-switch is a Linux application to switch between the integrated and dedicated GPU of the Macbook Pro 11,3 (Late 2013) for the next reboot.
 
 It targets to remove the need of booting into Mac OS X and running gfxCardStatus v2.2.1 to switch to the integrated card.
 
@@ -18,10 +18,6 @@ or a patched Kernel:
 
 Otherwise will end up with powered down integrated graphics card and a **black screen**.
 
-## Building:
-```
-git clone git@github.com:0xbb/gpu-switch.git
-make
 ```
 ## Usage:
 As root you can select the GPU by running gpu-switch and **rebooting** your machine.
