@@ -18,7 +18,6 @@ or a patched Kernel:
 
 Otherwise will end up with powered down integrated graphics card and a **black screen**.
 
-```
 ## Usage:
 As root you can select the GPU by running gpu-switch and **rebooting** your machine.
 #### switch to the integrated GPU
@@ -40,7 +39,7 @@ http://support.apple.com/kb/PH14222?viewlocale=en_US
 
 ## License:
 ```
-Copyright (C) 2014 Bruno Bierbaumer, Andreas Heider
+Copyright (C) 2014-2015 Bruno Bierbaumer, Andreas Heider
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in the
 Software without restriction, including without limitation the rights to
