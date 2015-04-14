@@ -1,22 +1,15 @@
 # gpu-switch
-gpu-switch is a Linux application to switch between the integrated and dedicated GPU of the Macbook Pro 11,3 (Late 2013) for the next reboot.
+gpu-switch is a Linux application to switch between the integrated and dedicated GPU of dual-GPU Macbook Pro models for the next reboot.
 
 It targets to remove the need of booting into Mac OS X and running gfxCardStatus v2.2.1 to switch to the integrated card.
 
 ## Warning:
 This is new code and it comes without any warranty! It's completely based on reverse engineering. Therefore use it at your own risk and don't blame us if anything breaks.
 
-## Requirements:
-By default the Intel GPU gets switched off by the EFI if you boot anything but Mac OS X.
-So to use the Intel GPU you need to trick the EFI by either using the grub "apple_set_os" function:
-- https://wiki.archlinux.org/index.php/MacBookPro11,x#Getting_the_integrated_intel_card_to_work_on_11.2C3
-- https://lists.gnu.org/archive/html/grub-devel/2013-12/msg00442.html
+##Tested Hardware:
+- Macbook Pro 10,1 (Mid 2012, Retina)
+- Macbook Pro 11,3 (Late 2013, Retina) 
 
-or a patched Kernel:
-
-- https://www.marc.info/?l=grub-deavel&m=141586614924917&w=2
-
-Otherwise will end up with powered down integrated graphics card and a **black screen**.
 
 ## Usage:
 As root you can select the GPU by running gpu-switch and **rebooting** your machine.
@@ -25,9 +18,21 @@ As root you can select the GPU by running gpu-switch and **rebooting** your mach
 #### switch to the dedicated GPU
 ``# ./gpu-switch -d``
 
+#### Macbook Pro 11,3 Quirks:
+By default the Intel GPU gets switched off by the Macbook Pro 11,3's EFI if you boot anything but Mac OS X.
+So to use the Intel GPU you need to trick the EFI by either using the grub "apple_set_os" function:
+- https://lists.gnu.org/archive/html/grub-devel/2013-12/msg00442.html
+- https://wiki.archlinux.org/index.php/MacBookPro11,x#Getting_the_integrated_intel_card_to_work_on_11.2C3
+
+or a patched Kernel:
+
+- https://www.marc.info/?l=grub-deavel&m=141586614924917&w=2
+
+Otherwise will end up with a powered down integrated graphics card and a **black screen**.
+
 ## Future Work:
 - Testing
-- Integrating "apple_set_os" in the Kernel
+- Integrating "apple_set_os" in the Kernel or Grub?
 - Documentation
  - (So far : https://gist.github.com/0xbb/974999591da4b1b2635c)
 
