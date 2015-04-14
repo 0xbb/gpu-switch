@@ -3,7 +3,7 @@ gpu-switch is a Linux application to switch between the integrated and dedicated
 
 It targets to remove the need of booting into Mac OS X and running gfxCardStatus v2.2.1 to switch to the integrated card.
 
-## Warning:
+### Warning:
 This is new code and it comes without any warranty! It's completely based on reverse engineering. Therefore use it at your own risk and don't blame us if anything breaks.
 
 ##Tested Hardware:
