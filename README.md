@@ -1,5 +1,5 @@
 # gpu-switch
-gpu-switch is a Linux application to switch between the integrated and dedicated GPU of dual-GPU Macbook Pro models for the next reboot.
+gpu-switch is an application to switch between the integrated and dedicated GPU of dual-GPU Macbook Pro models for the next reboot.
 
 It targets to remove the need of booting into Mac OS X and running gfxCardStatus v2.2.1 to switch to the integrated card.
 
@@ -11,22 +11,30 @@ This is new code and it comes without any warranty! It's completely based on rev
 - Macbook Pro 11,3 (Late 2013, Retina) 
 
 
-## Usage:
+## Linux Usage:
 As root you can select the GPU by running gpu-switch and **rebooting** your machine.
 #### switch to the integrated GPU
 ``# ./gpu-switch -i``
 #### switch to the dedicated GPU
 ``# ./gpu-switch -d``
 
-### Macbook Pro 11,3 Quirks:
+## Windows 8 Usage:
+Run the provided scripts by right click "Run as administrator"  and **rebooting** your machine.
+#### switch to the integrated GPU
+``integrated.bat``
+#### switch to the dedicated GPU
+``dedicated.bat``
+
+
+
+### Macbook Pro 11,3 notes:
 By default the Intel GPU gets switched off by the Macbook Pro 11,3's EFI if you boot anything but Mac OS X.
-So to use the Intel GPU you need to trick the EFI by either using the grub "apple_set_os" function:
-- https://lists.gnu.org/archive/html/grub-devel/2013-12/msg00442.html
-- https://wiki.archlinux.org/index.php/MacBookPro11,x#Getting_the_integrated_intel_card_to_work_on_11.2C3
-
-or a patched Kernel:
-
-- https://www.marc.info/?l=grub-deavel&m=141586614924917&w=2
+So to use the Intel GPU you need to trick the EFI by using the "apple_set_os" hack with:
+- apple_set_os.efi: https://github.com/0xbb/apple_set_os.efi
+- a patched Grub:
+ - https://lists.gnu.org/archive/html/grub-devel/2013-12/msg00442.html
+ - https://wiki.archlinux.org/index.php/MacBookPro11,x#Getting_the_integrated_intel_card_to_work_on_11.2C3
+- a patched Kernel: https://www.marc.info/?l=grub-deavel&m=141586614924917&w=2
 
 Otherwise will end up with a powered down integrated graphics card and a **black screen**.
 
