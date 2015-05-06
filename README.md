@@ -6,26 +6,18 @@ It targets to remove the need of booting into Mac OS X and running gfxCardStatus
 ### Warning:
 This is new code and it comes without any warranty! It's completely based on reverse engineering. Therefore use it at your own risk and don't blame us if anything breaks.
 
-##Tested Hardware:
-- Macbook Pro 10,1 (Mid 2012, Retina)
-- Macbook Pro 11,3 (Late 2013, Retina) 
-
-
 ## Linux Usage:
-As root you can select the GPU by running gpu-switch and **rebooting** your machine.
-#### switch to the integrated GPU
+As root you can select the GPU by running gpu-switch and **rebooting** your machine: 
+#### switch to the integrated GPU:
 ``# ./gpu-switch -i``
-#### switch to the dedicated GPU
+#### switch to the dedicated GPU:
 ``# ./gpu-switch -d``
 
 ## Windows 8 Usage:
-Run the provided scripts by right click "Run as administrator"  and **rebooting** your machine.
-#### switch to the integrated GPU
-``integrated.bat``
-#### switch to the dedicated GPU
-``dedicated.bat``
-
-
+* Download the [windows Version](https://github.com/0xbb/gpu-switch/releases/download/v0/gpu-switch-windows.zip)
+* Run the provided scripts by right click "Run as administrator"  and **rebooting** your machine:
+  * switch to the integrated GPU:  ``integrated.bat``
+  * switch to the dedicated GPU: ``dedicated.bat``
 
 ### Macbook Pro 11,3 notes:
 By default the Intel GPU gets switched off by the Macbook Pro 11,3's EFI if you boot anything but Mac OS X.
@@ -37,6 +29,10 @@ So to use the Intel GPU you need to trick the EFI by using the "apple_set_os" ha
 - a patched Kernel: https://www.marc.info/?l=grub-deavel&m=141586614924917&w=2
 
 Otherwise will end up with a powered down integrated graphics card and a **black screen**.
+
+##Tested Hardware:
+- Macbook Pro 10,1 (Mid 2012, Retina)
+- Macbook Pro 11,3 (Late 2013, Retina) 
 
 ## Future Work:
 - Testing
