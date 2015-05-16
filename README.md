@@ -21,11 +21,15 @@ As root you can select the GPU by running gpu-switch and **rebooting** your mach
 
 ### Macbook Pro 11,3 notes:
 By default the Intel GPU gets switched off by the Macbook Pro 11,3's EFI if you boot anything but Mac OS X.
-So to use the Intel GPU you need to trick the EFI by using the "apple_set_os" hack with:
+So to use the Intel GPU you need to trick the EFI by using the "apple_set_os" hack either with:
 - apple_set_os.efi: https://github.com/0xbb/apple_set_os.efi
+
+or
 - a patched Grub:
  - https://lists.gnu.org/archive/html/grub-devel/2013-12/msg00442.html
  - https://wiki.archlinux.org/index.php/MacBookPro11,x#Getting_the_integrated_intel_card_to_work_on_11.2C3
+
+or
 - a patched Kernel: https://www.marc.info/?l=grub-deavel&m=141586614924917&w=2
 
 Otherwise will end up with a powered down integrated graphics card and a **black screen**.
