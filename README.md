@@ -13,8 +13,8 @@ As root you can select the GPU by running gpu-switch and **rebooting** your mach
 #### switch to the dedicated GPU:
 ``# ./gpu-switch -d``
 
-## Windows 8 Usage:
-* Download the [windows Version](https://github.com/0xbb/gpu-switch/releases/download/v0/gpu-switch-windows.zip)
+## Windows 8/10 Usage:
+* Download the [Windows Version](https://github.com/0xbb/gpu-switch/releases/download/v0/gpu-switch-windows.zip)
 * Run the provided scripts by right click "Run as administrator"  and **rebooting** your machine:
   * switch to the integrated GPU:  ``integrated.bat``
   * switch to the dedicated GPU: ``dedicated.bat``
