@@ -28,7 +28,7 @@ or
 - a patched Grub:
  - https://lists.gnu.org/archive/html/grub-devel/2013-12/msg00442.html
  - https://wiki.archlinux.org/index.php/MacBookPro11,x#Getting_the_integrated_intel_card_to_work_on_11.2C3
-- a patched: rEFInd:
+- a patched rEFInd:
  - https://github.com/orospakr/refind
 
 or
