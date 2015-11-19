@@ -14,6 +14,7 @@ As root you can select the GPU by running gpu-switch and **rebooting** your mach
 ``# ./gpu-switch -d``
 
 ## Windows 8/10 Usage:
+* Windows is using the Macbook's UEFI mode ([how to check](http://blogs.technet.com/b/home_is_where_i_lay_my_head/archive/2012/10/02/how-to-check-in-windows-if-you-are-using-uefi.aspx))
 * Download the [Windows Version](https://github.com/0xbb/gpu-switch/releases/download/v0/gpu-switch-windows.zip)
 * Run the provided scripts by right click "Run as administrator"  and **rebooting** your machine:
   * switch to the integrated GPU:  ``integrated.bat``
