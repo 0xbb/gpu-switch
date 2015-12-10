@@ -38,6 +38,7 @@ or
 Otherwise will end up with a powered down integrated graphics card and a **black screen**.
 
 ##Tested Hardware:
+- MacBook Pro 5,2  (Early 2009, Non-Retina)
 - MacBook Pro 5,3  (Mid  2009, Non-Retina)
 - MacBook Pro 8,2  (Late 2011, Non-Retina)
 - MacBook Pro 9,1  (Mid  2012, Non-Retina)
