@@ -1,5 +1,5 @@
 # gpu-switch
-gpu-switch is an application to switch between the integrated and dedicated GPU of dual-GPU Macbook Pro models for the next reboot.
+gpu-switch is an application to switch between the integrated and dedicated GPU of dual-GPU MacBook Pro models for the next reboot.
 
 It targets to remove the need of booting into Mac OS X and running gfxCardStatus v2.2.1 to switch to the integrated card.
 
@@ -14,14 +14,14 @@ As root you can select the GPU by running gpu-switch and **rebooting** your mach
 ``# ./gpu-switch -d``
 
 ## Windows 8/10 Usage:
-* Windows is using the Macbook's UEFI mode ([how to check](http://blogs.technet.com/b/home_is_where_i_lay_my_head/archive/2012/10/02/how-to-check-in-windows-if-you-are-using-uefi.aspx))
+* Windows is using the MacBook's UEFI mode ([how to check](http://blogs.technet.com/b/home_is_where_i_lay_my_head/archive/2012/10/02/how-to-check-in-windows-if-you-are-using-uefi.aspx))
 * Download the [Windows Version](https://github.com/0xbb/gpu-switch/releases/download/v0/gpu-switch-windows.zip)
 * Run the provided scripts by right click "Run as administrator"  and **rebooting** your machine:
   * switch to the integrated GPU:  ``integrated.bat``
   * switch to the dedicated GPU: ``dedicated.bat``
 
-### Macbook Pro 11,3 notes:
-By default the Intel GPU gets switched off by the Macbook Pro 11,3's EFI if you boot anything but Mac OS X.
+### MacBook Pro 11,3 notes:
+By default the Intel GPU gets switched off by the MacBook Pro 11,3's EFI if you boot anything but Mac OS X.
 So to use the Intel GPU you need to trick the EFI by using the "apple_set_os" hack either with:
 - apple_set_os.efi: https://github.com/0xbb/apple_set_os.efi
 
@@ -38,11 +38,12 @@ or
 Otherwise will end up with a powered down integrated graphics card and a **black screen**.
 
 ##Tested Hardware:
-- Macbook Pro 5,3  (Mid  2009, Non-Retina)
-- Macbook Pro 8,2  (Late 2011, Non-Retina)
-- Macbook Pro 9,1  (Mid  2012, Non-Retina)
-- Macbook Pro 10,1 (Mid  2012, Retina)
-- Macbook Pro 11,3 (Late 2013, Retina) 
+- MacBook Pro 5,2  (Early 2009, Non-Retina)
+- MacBook Pro 5,3  (Mid  2009, Non-Retina)
+- MacBook Pro 8,2  (Late 2011, Non-Retina)
+- MacBook Pro 9,1  (Mid  2012, Non-Retina)
+- MacBook Pro 10,1 (Mid  2012, Retina)
+- MacBook Pro 11,3 (Late 2013, Retina) 
 
 ## Future Work:
 - Testing
