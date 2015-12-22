@@ -12,7 +12,7 @@ Usage:
   $(basename $0) --help         # Show this message
 
 Switches between the integrated and dedicated graphics cards of a dual-GPU
-Macbook Pro for the next reboot.
+MacBook Pro for the next reboot.
 
 Arguments:
   -i, --integrated
@@ -24,12 +24,12 @@ Tested hardware:
   MacBook Pro 5,3  (Mid   2009, Non-Retina)
   MacBook Pro 8,2  (Late  2011, Non-Retina)
   MacBook Pro 9,1  (Mid   2012, Non-Retina)
-  Macbook Pro 10,1 (Mid   2012, Retina)
-  Macbook Pro 11,3 (Late  2013, Retina)
+  MacBook Pro 10,1 (Mid   2012, Retina)
+  MacBook Pro 11,3 (Late  2013, Retina)
 EOF
 }
 
-swich_gpu(){
+switch_gpu(){
   if ! [ -d /sys/firmware/efi ]; then
     printf "Fatal: $(basename $0) has to be run in EFI mode.\n" 1>&2
     exit 1
@@ -51,10 +51,10 @@ fi
 
 case "$1" in
   -i|--integrated)
-    swich_gpu 1
+    switch_gpu 1
   ;;
   -d|--dedicated)
-    swich_gpu 0
+    switch_gpu 0
   ;;
   -h|--help)
     usage 
