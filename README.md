@@ -1,13 +1,13 @@
 # gpu-switch
 gpu-switch is an application to switch between the integrated and dedicated GPU of dual-GPU MacBook Pro models for the next reboot.
 
-It targets to remove the need of booting into Mac OS X and running gfxCardStatus v2.2.1 to switch to the integrated card.
+It aims to remove the need of booting into Mac OS X and running gfxCardStatus v2.2.1 to switch to the integrated card.
 
 ### Warning:
 This is new code and it comes without any warranty! It's completely based on reverse engineering. Therefore use it at your own risk and don't blame us if anything breaks.
 
 ## Linux Usage:
-As root you can select the GPU by running gpu-switch and **rebooting** your machine: 
+As root you can select the GPU by running gpu-switch and **rebooting** your machine:
 #### switch to the integrated GPU:
 ``# ./gpu-switch -i``
 #### switch to the dedicated GPU:
@@ -22,32 +22,35 @@ As root you can select the GPU by running gpu-switch and **rebooting** your mach
 
 ### MacBook Pro 11,3 notes:
 By default the Intel GPU gets switched off by the MacBook Pro 11,3's EFI if you boot anything but Mac OS X.
-So to use the Intel GPU you need to trick the EFI by using the "apple_set_os" hack either with:
+So to use the Intel GPU, you need to trick the EFI by using the "apple_set_os" hack either with:
+- rEFInd version 0.10.0 or above (recommended): http://www.rodsbooks.com/refind
+
+  Recent versions of rEFInd have the "apple_set_os" hack built-in. You can enable it by setting the ``spoof_osx_version`` option in your `refind.conf`.
+
+or
 - apple_set_os.efi: https://github.com/0xbb/apple_set_os.efi
 
 or
-- a patched Grub:
+- a patched GRUB:
  - https://lists.gnu.org/archive/html/grub-devel/2013-12/msg00442.html
  - https://wiki.archlinux.org/index.php/MacBookPro11,x#Getting_the_integrated_intel_card_to_work_on_11.2C3
-- a patched rEFInd:
- - https://github.com/orospakr/refind
 
 or
 - a patched Kernel: https://www.marc.info/?l=grub-deavel&m=141586614924917&w=2
 
-Otherwise will end up with a powered down integrated graphics card and a **black screen**.
+Otherwise you will end up with a powered-down integrated graphics card and a **black screen**.
 
-##Tested Hardware:
+## Tested Hardware:
 - MacBook Pro 5,2  (Early 2009, Non-Retina)
 - MacBook Pro 5,3  (Mid  2009, Non-Retina)
 - MacBook Pro 8,2  (Late 2011, Non-Retina)
 - MacBook Pro 9,1  (Mid  2012, Non-Retina)
 - MacBook Pro 10,1 (Mid  2012, Retina)
-- MacBook Pro 11,3 (Late 2013, Retina) 
+- MacBook Pro 11,3 (Late 2013, Retina)
 
 ## Future Work:
 - Testing
-- Integrating "apple_set_os" in the Kernel or Grub?
+- Integrating "apple_set_os" in the Kernel or GRUB?
 - Documentation
  - (So far : https://gist.github.com/0xbb/974999591da4b1b2635c)
 
