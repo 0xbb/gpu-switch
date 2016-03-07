@@ -41,6 +41,7 @@ switch_gpu(){
       exit 1
     fi
   fi
+  chattr -i "${sysfs_efi_vars}/${efi_gpu}" 2> /dev/null
   printf "\x07\x00\x00\x00\x${1}\x00\x00\x00" > "${sysfs_efi_vars}/${efi_gpu}" 
 }
 
