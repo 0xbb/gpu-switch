@@ -1,7 +1,7 @@
 # gpu-switch
 gpu-switch is an application to switch between the integrated and dedicated GPU of dual-GPU MacBook Pro models for the next reboot.
 
-It aims to remove the need of booting into Mac OS X and running gfxCardStatus v2.2.1 to switch to the integrated card.
+It aims to remove the need of booting into OS X and running gfxCardStatus v2.2.1 to switch to the integrated card.
 
 ### Warning:
 This is new code and it comes without any warranty! It's completely based on reverse engineering. Therefore use it at your own risk and don't blame us if anything breaks.
@@ -13,15 +13,29 @@ As root you can select the GPU by running gpu-switch and **rebooting** your mach
 #### switch to the dedicated GPU:
 ``# ./gpu-switch -d``
 
+## OS X Usage:
+Use ``$ ./build.sh`` to build gpu-switch.
+OS X can switch between the GPUs without having to reboot the MacBook:
+#### switch to the integrated GPU:
+``$ ./gpu-switch -i``
+#### switch to the dedicated GPU:
+``$ ./gpu-switch -d``
+#### enable automatic GPU switching:
+``$ ./gpu-switch -a``
+
+#### Login Hooks:
+``$ ./install_hooks.sh`` can be used to install Login Hooks to automate the swichting process for login/logout.
+
+
 ## Windows 8/10 Usage:
 * Windows is using the MacBook's UEFI mode ([how to check](http://blogs.technet.com/b/home_is_where_i_lay_my_head/archive/2012/10/02/how-to-check-in-windows-if-you-are-using-uefi.aspx))
 * Download the [Windows Version](https://github.com/0xbb/gpu-switch/releases/download/v0/gpu-switch-windows.zip)
-* Run the provided scripts by right click "Run as administrator"  and **rebooting** your machine:
+* Run the provided scripts by right click "Run as administrator" and **rebooting** your machine:
   * switch to the integrated GPU:  ``integrated.bat``
   * switch to the dedicated GPU: ``dedicated.bat``
 
 ### MacBook Pro 11,3 and 11,5 notes:
-By default the Intel GPU gets switched off by the MacBook Pro 11,3's (and 11,5's) EFI if you boot anything but Mac OS X.
+By default the Intel GPU gets switched off by the MacBook Pro 11,3's (and 11,5's) EFI if you boot anything but OS X.
 So to use the Intel GPU, you need to trick the EFI by using the "apple_set_os" hack either with:
 - rEFInd version 0.10.0 or above (recommended): http://www.rodsbooks.com/refind
 
@@ -48,12 +62,6 @@ Otherwise you will end up with a powered-down integrated graphics card and a **b
 - MacBook Pro 10,1 (Mid  2012, Retina)
 - MacBook Pro 11,3 (Late 2013, Retina)
 - MacBook Pro 11,5 (Mid 2015, Retina)
-
-## Future Work:
-- Testing
-- Integrating "apple_set_os" in the Kernel or GRUB?
-- Documentation
- - (So far : https://gist.github.com/0xbb/974999591da4b1b2635c)
 
 ## Troubleshooting:
 If you are facing weird problems a NVRAM reset could help:
