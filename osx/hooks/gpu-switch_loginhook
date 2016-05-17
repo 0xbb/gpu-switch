@@ -1,0 +1,5 @@
+#!/bin/bash
+binary="/Library/gpu-switch_hooks/gpu-switch"
+
+$binary -a
+
