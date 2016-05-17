@@ -63,7 +63,7 @@ http://support.apple.com/kb/PH14222?viewlocale=en_US
 
 ## License:
 ```
-Copyright (C) 2014-2015 Bruno Bierbaumer, Andreas Heider
+Copyright (C) 2014-2016 Bruno Bierbaumer, Andreas Heider, Malte Bargholz
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in the
 Software without restriction, including without limitation the rights to
