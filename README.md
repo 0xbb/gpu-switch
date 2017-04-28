@@ -14,6 +14,8 @@ As root you can select the GPU by running gpu-switch and **rebooting** your mach
 ``# ./gpu-switch -d``
 
 ## OS X Usage:
+**WARNING: broken on macOS +10.12.4**
+
 Use ``$ ./build.sh`` to build gpu-switch.
 OS X can switch between the GPUs without having to reboot the MacBook:
 #### switch to the integrated GPU:
