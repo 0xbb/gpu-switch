@@ -30,7 +30,7 @@ OS X can switch between the GPUs without having to reboot the MacBook:
 
 
 ## Windows 8/10 Usage:
-* Windows is using the MacBook's UEFI mode ([how to check](http://blogs.technet.com/b/home_is_where_i_lay_my_head/archive/2012/10/02/how-to-check-in-windows-if-you-are-using-uefi.aspx))
+* Windows is using the MacBook's UEFI mode ([how to check](https://docs.microsoft.com/en-us/archive/blogs/home_is_where_i_lay_my_head/how-to-check-in-windows-if-you-are-using-uefi))
 * Download the [Windows Version](https://github.com/0xbb/gpu-switch/releases/download/v0/gpu-switch-windows.zip)
 * Run the provided scripts by right click "Run as administrator" and **rebooting** your machine:
   * switch to the integrated GPU:  ``integrated.bat``
