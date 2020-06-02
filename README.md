@@ -64,6 +64,7 @@ Otherwise you will end up with a powered-down integrated graphics card and a **b
 - MacBook Pro 10,1 (Mid  2012, Retina)
 - MacBook Pro 11,3 (Late 2013, Retina)
 - MacBook Pro 11,5 (Mid 2015, Retina)
+- MacBook Pro 14,3 (Mid 2017, Retina)
 
 ## Troubleshooting:
 If you are facing weird problems a NVRAM reset could help:
